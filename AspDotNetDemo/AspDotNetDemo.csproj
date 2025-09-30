@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Privacy.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="Pages\Privacy.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
