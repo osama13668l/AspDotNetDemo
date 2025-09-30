@@ -1,0 +1,29 @@
+﻿@page
+@model AspDotNetDemo.Pages.AboutModel
+@{
+}
+<h1>@Model.Title</h1>
+
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var book in Model.GetBooks())
+            {
+                <tr>
+                    <td>@book.Id</td>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.Price</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
