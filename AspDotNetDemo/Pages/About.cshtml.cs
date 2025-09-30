@@ -23,7 +23,7 @@ namespace AspDotNetDemo.Pages
         }
         public string GetTitle()
         {
-            return "About page";
+            return Properties.Resources.AboutPageTitle;
         }
         public List<Book> GetBooks()
         {
