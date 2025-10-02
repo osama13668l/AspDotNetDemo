@@ -4,4 +4,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+<<<<<<< HEAD
+  <ItemGroup>
+    <ProjectReference Include="..\AspDotNetDemo.Core\AspDotNetDemo.Core.csproj" />
+  </ItemGroup>
+
+=======
+>>>>>>> 647b00c1a4bb8cdef0c5cadd790477509e072f9d
 </Project>

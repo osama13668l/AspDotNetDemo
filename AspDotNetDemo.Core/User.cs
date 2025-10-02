@@ -2,7 +2,11 @@
 
 namespace AspDotNetDemo.Core
 {
+<<<<<<< HEAD
+    public class User
+=======
     internal class User
+>>>>>>> 647b00c1a4bb8cdef0c5cadd790477509e072f9d
     {
         [Required]
         public int Id { get; set; }
