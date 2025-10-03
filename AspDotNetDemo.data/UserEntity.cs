@@ -32,7 +32,6 @@ namespace AspDotNetDemo.data
                 Id = table.Id,
                 FirstName = table.FirstName,
                 LastName = table.LastName,
-                Email = table.Email,
                 Password = table.Password,
                 Phone = table.Phone,
                 Bio = table.Bio
