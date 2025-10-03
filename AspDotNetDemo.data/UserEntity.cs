@@ -12,6 +12,9 @@ namespace AspDotNetDemo.data
         public UserEntity()
         {
             ListOfUser = new List<User>();
+            ListOfUser = new List<User> {
+            new User(){ Id=1, FirstName="safaa", LastName ="jassim", Password="12345", Email = "o@mail.com"}
+            };
         }
         public void Add(User table)
         {
@@ -29,12 +32,12 @@ namespace AspDotNetDemo.data
             user = Find(Id);
             user = new User()
             {
-                Id = table.Id,
+                Bio = table.Bio,
+                Email = table.Email,
                 FirstName = table.FirstName,
                 LastName = table.LastName,
                 Password = table.Password,
-                Phone = table.Phone,
-                Bio = table.Bio
+                Phone = table.Phone
             };
 
         }

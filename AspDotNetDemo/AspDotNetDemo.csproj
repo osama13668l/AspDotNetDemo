@@ -13,6 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AspDotNetDemo.Core\AspDotNetDemo.Core.csproj" />
+    <ProjectReference Include="..\AspDotNetDemo.data\AspDotNetDemo.data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
