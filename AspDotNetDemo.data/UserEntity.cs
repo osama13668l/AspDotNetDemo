@@ -13,7 +13,10 @@ namespace AspDotNetDemo.data
         {
             ListOfUser = new List<User>();
             ListOfUser = new List<User> {
-            new User(){ Id=1, FirstName="safaa", LastName ="jassim", Password="12345", Email = "o@mail.com"}
+                new User(){ Id=1, FirstName="Safaa", LastName ="Jassim", Password="12345", Email = "o@mail.com",Phone=123456789},
+                new User(){ Id=2, FirstName="Ali", LastName ="Ahamd", Password="12345", Email = "o@mail.com",Phone=123456789},
+                new User(){ Id=3, FirstName="kmal", LastName ="klin", Password="12345", Email = "o@mail.com",Phone=123456789},
+                new User(){ Id=4, FirstName="zaid", LastName ="saad", Password="12345", Email = "o@mail.com",Phone=123456789},
             };
         }
         public void Add(User table)
