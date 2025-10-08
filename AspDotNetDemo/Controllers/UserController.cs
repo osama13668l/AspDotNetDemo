@@ -20,7 +20,7 @@ namespace AspDotNetDemo.Controllers
         // GET: UserController
         public ActionResult Index()
         {
-            return View();
+            return View(dataHelper.GetData());
         }
 
         // GET: UserController/Details/5
