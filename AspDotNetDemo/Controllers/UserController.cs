@@ -13,6 +13,7 @@ namespace AspDotNetDemo.Controllers
     {
         private readonly IDataHelper<User> dataHelper;
 
+        private User user;
         public UserController(IDataHelper<User> dataHelper)
         {
             this.dataHelper = dataHelper;
@@ -26,7 +27,8 @@ namespace AspDotNetDemo.Controllers
         // GET: UserController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            user = dataHelper.Find(id);
+            return View(user);
         }
 
         // GET: UserController/Create
@@ -38,10 +40,11 @@ namespace AspDotNetDemo.Controllers
         // POST: UserController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(User collection)
         {
             try
             {
+                dataHelper.Add(collection);
                 return RedirectToAction(nameof(Index));
             }
             catch
