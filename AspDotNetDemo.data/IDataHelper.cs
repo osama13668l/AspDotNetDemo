@@ -6,7 +6,7 @@ namespace AspDotNetDemo.data
 {
     public interface IDataHelper<Table>
     {
-        List <Table> GetData();
+        List<Table> GetData();
         List<Table> Seach(string SearchItem);
 
         Table Find(int Id);

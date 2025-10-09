@@ -27,6 +27,7 @@ namespace AspDotNetDemo
         {
             services.AddSingleton<IDataHelper<User>, UserEntity>();
             services.AddRazorPages();
+            services.AddMvc(op => op.EnableEndpointRouting = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,11 +46,9 @@ namespace AspDotNetDemo
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
+            app.UseMvcWithDefaultRoute();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
