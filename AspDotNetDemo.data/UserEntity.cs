@@ -35,6 +35,7 @@ namespace AspDotNetDemo.data
             user = Find(Id);
             user = new User()
             {
+                Id = table.Id,
                 Bio = table.Bio,
                 Email = table.Email,
                 FirstName = table.FirstName,
@@ -42,6 +43,8 @@ namespace AspDotNetDemo.data
                 Password = table.Password,
                 Phone = table.Phone
             };
+            var index = ListOfUser.FindIndex(X => X.Id == Id);
+            ListOfUser[index] = user;
 
         }
 
@@ -55,7 +58,7 @@ namespace AspDotNetDemo.data
             return ListOfUser;
         }
 
-        public List<User> Seach(string SearchItem)
+        public List<User> Search(string SearchItem)
         {
             return ListOfUser.Where(X => X.Id.ToString() == SearchItem
             || X.FirstName.Contains(SearchItem)

@@ -62,10 +62,11 @@ namespace AspDotNetDemo.Controllers
         // POST: UserController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, User collection)
         {
             try
             {
+                dataHelper.Edit(id, collection);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -77,16 +78,18 @@ namespace AspDotNetDemo.Controllers
         // GET: UserController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            user = dataHelper.Find(id);
+            return View(user);
         }
 
         // POST: UserController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, User collection)
         {
             try
             {
+                dataHelper.Delete(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
