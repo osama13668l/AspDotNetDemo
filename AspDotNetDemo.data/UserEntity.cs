@@ -50,7 +50,14 @@ namespace AspDotNetDemo.data
 
         public User Find(int Id)
         {
-            return ListOfUser.Where(X => X.Id == Id).First();
+            if (Id > 0)
+            {
+                return ListOfUser.Where(X => X.Id == Id).First();
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public List<User> GetData()
